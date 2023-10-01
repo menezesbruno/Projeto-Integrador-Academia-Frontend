@@ -1,0 +1,18 @@
+.form-container {
+    flex: 1;
+    margin-right: 20px; /* Espaço entre as partes do formulário */
+  }
+  
+  .message-container {
+    flex: 1;
+  }
+
+  .botao {
+    background-color: yellow;
+    color: black;
+    border: none;
+    width: 150px; /* Defina a largura desejada */
+    height: 50px; /* Defina a altura desejada */
+    padding: 10px 20px;
+    cursor: pointer;
+  }
