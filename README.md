@@ -1,1 +1,1 @@
-# Projeto-Integrador-Academia-Frontend
+# pji-academy
