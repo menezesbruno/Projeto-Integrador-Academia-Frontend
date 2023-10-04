@@ -47,7 +47,9 @@ export default class Slide extends React.Component {
             }
         ]
         return (
-            <ImageGallery items={images} autoPlay={false} />
+            <div style={{ maxWidth: '100%' }}>
+                <ImageGallery items={images} autoPlay={false} />
+            </div>
         );
     }
 }

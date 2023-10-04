@@ -22,11 +22,12 @@ export const HeaderArea = styled.div`
     position: relative;
     justify-content: center;
     top: -90 px;
+    text-align:center;
 
     h1{
         z-index: 2;
         font-weight: 700;
-        font-size: 70px;
+        font-size: 60px;
         letter-spacing: 1px;
         color: #ff0030;
         text-shadow: 10 0 10px #ff002275;

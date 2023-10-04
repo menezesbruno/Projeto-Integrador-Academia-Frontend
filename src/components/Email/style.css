@@ -11,8 +11,44 @@
     background-color: yellow;
     color: black;
     border: none;
-    width: 150px; /* Defina a largura desejada */
-    height: 50px; /* Defina a altura desejada */
+    width: 150px;
+    height: 50px; 
     padding: 10px 20px;
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    .mobile-form {
+      width: 160%;
+      padding: 0 10px;
+    }
+  }
+
+  /* Estilos para dispositivos Windows */
+@media (min-width: 800px) {
+  .input-field {
+    width: 150%;
+    font-size: 1em;
+  }
+}
+
+/* Estilos para dispositivos Android */
+@media (max-width: 799px) {
+  .input-field {
+    width: 100%;
+    font-size: 0.8em;
+    padding: 0 10px;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.label {
+  flex: 2;
+  text-align: left;
+  padding-right: 20px; /* Espaço entre o rótulo e o campo de entrada */
+}

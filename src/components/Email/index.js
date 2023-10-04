@@ -41,66 +41,79 @@ export const ContactUS = () => {
 
   return (
     <S.StyledContactForm>
-      <div style={{ display: "flex", justifyContent: "space-between"}}>
-              <div style={{ flex: 1, marginRight: "60px", minWidth: "600px"}}>
-                
-                <form onSubmit={sendEmail}>
-                      <label>Nome:</label>
-                        <input
-                        type="text"
-                        placeholder="Digite o seu nome ...."
-                        name="name"
-                        onChange={(e) => {setName(e.target.value);}} value={name}
-                        />
-                      <label>Email:</label>
-                        <input
-                        type="email"
-                        placeholder="Digite o seu email ...."
-                        name="email"
-                        onChange={(e) => {setEmail(e.target.value);}} value={email}
-                        />
-                      <label>Celular:</label>
-                        <input
-                        type="phone"
-                        placeholder="Digite o seu Telefone ...."
-                        name="phone"
-                        onChange={(e) => {setPhone(e.target.value);}} value={phone}
-                        />
-
-                        <div style={{ display: "flex", alignItems: "center" }}>
-                        <input
-                            type="checkbox"
-                            checked={contactPermission === 'sim'} 
-                            onChange={(e) => setContactPermission(e.target.checked ? 'sim' : 'não')}
-                            style={{ marginRight: "20px" }}
-                        />
-                        <label style={{ fontSize: "14px", whiteSpace: "nowrap", maxWidth: "200px" }}> Autorizo receber o contato via WhatsApp, SMS ou telegram</label>                        
-                        </div>
-                       <label>Qual o seu objetivo?</label>
-                       <select
-                          name="selectedOption"
-                          value={selectedOption}
-                          onChange={(e) => setSelectedOption(e.target.value)} 
-                          >
-                          <option value="Musculação">Musculação</option>
-                          <option value="Nutrição">Nutrição</option>
-                          <option value="Step">Step</option>
-                          <option value="Jump">Jump</option>
-                          <option value="Outros">Outros</option>
-                        </select>
+              <div style={{ flex: 1, marginRight: "2%", minWidth: "30%"}}>  
+                <form onSubmit={sendEmail} className="mobile-form">
+                    <div className="input-group">
+                        <label className='label-left'>Nome:</label>
+                          <input
+                          type="text"
+                          placeholder="Digite o seu nome ...."
+                          name="name"
+                          onChange={(e) => {setName(e.target.value);}} value={name}
+                          className="input-field"
+                          />
+                    </div>
+                    <div className="input-group">
+                        <label>Email:</label>
+                          <input
+                          type="email"
+                          placeholder="Digite o seu email ...."
+                          name="email"
+                          onChange={(e) => {setEmail(e.target.value);}} value={email}
+                          className="input-field"
+                          />
+                    </div>
+                    <div className="input-group">
+                        <label>Celular:</label>
+                          <input
+                          type="phone"
+                          placeholder="Digite o seu Telefone ...."
+                          name="phone"
+                          onChange={(e) => {setPhone(e.target.value);}} value={phone}
+                          className="input-field"
+                          />
+                      </div>
+                      <div className="input-group">
+                          <div style={{ display: "flex", alignItems: "center" }}>
+                          <input
+                              type="checkbox"
+                              checked={contactPermission === 'sim'} 
+                              onChange={(e) => setContactPermission(e.target.checked ? 'sim' : 'não')}
+                              style={{ marginRight: "5%",width: "22px", height: "22px" }}
+                              className="input-field"
+                          />
+                          <label style={{ fontSize: "14px", whiteSpace: "nowrap", maxWidth: "20vw" }}>Autorizo receber o contato via whatsapp ou SMS</label>                        
+                          </div>
+                      </div>
+                      <div className="input-group">
+                        <label>Qual o seu objetivo?</label>
+                        <select
+                            name="selectedOption"
+                            value={selectedOption}
+                            onChange={(e) => setSelectedOption(e.target.value)} 
+                            className="input-field"                   
+                            >
+                            <option value="Musculação">Musculação</option>
+                            <option value="Nutrição">Nutrição</option>
+                            <option value="Step">Step</option>
+                            <option value="Jump">Jump</option>
+                            <option value="Outros">Outros</option>
+                          </select>
+                      </div>
+                      <div className="input-group">
                         <label>Mensagem:</label> 
                             <textarea
                               placeholder="Digite sua mensagem ...."
                               name="message"
                               onChange={(e) => {setMessage(e.target.value);}} value={message}
+                              className="input-field"
                             />
-
-                      <input type="submit" value="Enviar Informações" />
-
+                      </div>
+                      <div className="input-group">
+                         <input type="submit" value="Enviar Informações" className="input-field"/>
+                      </div>
                 </form>
               </div>
-        </div>
-      
     </S.StyledContactForm>
   );
 };
