@@ -22,6 +22,7 @@ export const HeaderArea = styled.div`
     position: relative;
     justify-content: center;
     top: -90 px;
+    text-align:center;
 
     h1{
         z-index: 2;

@@ -1,25 +1,25 @@
 import styled from 'styled-components'
 
 export const StyledContactForm = styled.div`
-  width: 400px;
+  width: 600px;
   display: flex;
   justify-content: center;
+  height: 100vh;
 
   form {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     font-size: 16px;
 
     input {
-      width: 100%;
       height: 35px;
       padding: 7px;
       outline: none;
       color: black;
-      border-radius: 15px;
+      border-radius: 0px;
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
@@ -28,12 +28,11 @@ export const StyledContactForm = styled.div`
     }
 
     select{
-      width: 100%;
       height: 35px;
       padding: 7px;
       outline: none;
       color: black;
-      border-radius: 15px;
+      border-radius: 0px;
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
@@ -42,19 +41,16 @@ export const StyledContactForm = styled.div`
     }
 
     select option {
-      color: black; /* Define a cor do texto das opções para preto */
+      color: black;
     }
 
     textarea {
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
       max-height: 100px;
-      min-height: 100px;
+      min-height: 130px;
       padding: 7px;
       outline: none;
       color: black;
-      border-radius: 15px;
+      border-radius: 0px;
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
@@ -68,6 +64,7 @@ export const StyledContactForm = styled.div`
 
     input[type="submit"] {
       margin-top: 2rem;
+      border-radius: 15px;
       cursor: pointer;
       background: rgb(249, 105, 14);
       color: black;

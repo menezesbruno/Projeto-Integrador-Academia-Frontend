@@ -18,6 +18,7 @@ export const ContainerInfo = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    text-align:center;
 
     h1{
         text-align: center;
